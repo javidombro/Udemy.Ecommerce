@@ -27,6 +27,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Domain.Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Domain.Core", "Udemy.Ecommerce.Domain.Core\Udemy.Ecommerce.Domain.Core.csproj", "{A8948D95-59FA-4AE9-B779-001436C8E13A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Transversal.Mapper", "Udemy.Ecommerce.Transversal.Mapper\Udemy.Ecommerce.Transversal.Mapper.csproj", "{099C2435-72E7-4BCA-8963-D19DA6413032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Transversal.Logging", "Udemy.Ecommerce.Transversal.Logging\Udemy.Ecommerce.Transversal.Logging.csproj", "{E37C872D-FE5C-4E55-98A4-A950B9108217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Application.DTO", "Udemy.Ecommerce.Application.DTO\Udemy.Ecommerce.Application.DTO.csproj", "{B014B0B5-4427-4D01-888C-8AFC20C388B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Application.Interface", "Udemy.Ecommerce.Application.Interface\Udemy.Ecommerce.Application.Interface.csproj", "{44B3AC18-73BE-4446-A257-F5BBE5EA5777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Application.Main", "Udemy.Ecommerce.Application.Main\Udemy.Ecommerce.Application.Main.csproj", "{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +71,26 @@ Global
 		{A8948D95-59FA-4AE9-B779-001436C8E13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8948D95-59FA-4AE9-B779-001436C8E13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8948D95-59FA-4AE9-B779-001436C8E13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{099C2435-72E7-4BCA-8963-D19DA6413032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{099C2435-72E7-4BCA-8963-D19DA6413032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{099C2435-72E7-4BCA-8963-D19DA6413032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{099C2435-72E7-4BCA-8963-D19DA6413032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37C872D-FE5C-4E55-98A4-A950B9108217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37C872D-FE5C-4E55-98A4-A950B9108217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37C872D-FE5C-4E55-98A4-A950B9108217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37C872D-FE5C-4E55-98A4-A950B9108217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B014B0B5-4427-4D01-888C-8AFC20C388B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B014B0B5-4427-4D01-888C-8AFC20C388B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B014B0B5-4427-4D01-888C-8AFC20C388B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B014B0B5-4427-4D01-888C-8AFC20C388B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B3AC18-73BE-4446-A257-F5BBE5EA5777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B3AC18-73BE-4446-A257-F5BBE5EA5777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B3AC18-73BE-4446-A257-F5BBE5EA5777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B3AC18-73BE-4446-A257-F5BBE5EA5777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +103,11 @@ Global
 		{059FDFB5-DDE4-4C5F-910D-F7485BA4299A} = {880BB2CA-3A15-4EC7-8983-B3C7D8CD679E}
 		{B583383D-EBC6-4CE1-928F-4CA2DCD308F7} = {62765A7B-DC99-4FDC-A5B0-A8970985A09E}
 		{A8948D95-59FA-4AE9-B779-001436C8E13A} = {62765A7B-DC99-4FDC-A5B0-A8970985A09E}
+		{099C2435-72E7-4BCA-8963-D19DA6413032} = {15A2613E-6F30-4B16-94E6-3561D21CD4D7}
+		{E37C872D-FE5C-4E55-98A4-A950B9108217} = {15A2613E-6F30-4B16-94E6-3561D21CD4D7}
+		{B014B0B5-4427-4D01-888C-8AFC20C388B1} = {606F3061-1B90-4A51-91DF-2118FE2A88E8}
+		{44B3AC18-73BE-4446-A257-F5BBE5EA5777} = {606F3061-1B90-4A51-91DF-2118FE2A88E8}
+		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D} = {606F3061-1B90-4A51-91DF-2118FE2A88E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A31EFF21-FFBB-41BD-A687-5B2C3722B281}

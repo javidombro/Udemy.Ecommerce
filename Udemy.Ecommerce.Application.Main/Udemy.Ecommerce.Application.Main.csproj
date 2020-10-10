@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Udemy.Ecommerce.Application.Interface\Udemy.Ecommerce.Application.Interface.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Domain.Interface\Udemy.Ecommerce.Domain.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
