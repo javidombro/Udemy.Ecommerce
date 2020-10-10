@@ -17,11 +17,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Domain.Entity", "Udemy.Ecommerce.Domain.Entity\Udemy.Ecommerce.Domain.Entity.csproj", "{83BBF2A6-BBCB-40B4-AE85-31A263984C7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Infraestructure.Data", "Udemy.Ecommerce.Infraestructure.Data\Udemy.Ecommerce.Infraestructure.Data.csproj", "{713BFC2C-9E0D-4F91-BD24-8CDA2DD40707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Infraestructure.Data", "Udemy.Ecommerce.Infraestructure.Data\Udemy.Ecommerce.Infraestructure.Data.csproj", "{713BFC2C-9E0D-4F91-BD24-8CDA2DD40707}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Infraestructure.Interface", "Udemy.Ecommerce.Infraestructure.Interface\Udemy.Ecommerce.Infraestructure.Interface.csproj", "{163D14B6-059F-42DA-A934-C683E46DC9E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Infraestructure.Interface", "Udemy.Ecommerce.Infraestructure.Interface\Udemy.Ecommerce.Infraestructure.Interface.csproj", "{163D14B6-059F-42DA-A934-C683E46DC9E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Infraestructure.Repository", "Udemy.Ecommerce.Infraestructure.Repository\Udemy.Ecommerce.Infraestructure.Repository.csproj", "{059FDFB5-DDE4-4C5F-910D-F7485BA4299A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Infraestructure.Repository", "Udemy.Ecommerce.Infraestructure.Repository\Udemy.Ecommerce.Infraestructure.Repository.csproj", "{059FDFB5-DDE4-4C5F-910D-F7485BA4299A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Domain.Interface", "Udemy.Ecommerce.Domain.Interface\Udemy.Ecommerce.Domain.Interface.csproj", "{B583383D-EBC6-4CE1-928F-4CA2DCD308F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Domain.Core", "Udemy.Ecommerce.Domain.Core\Udemy.Ecommerce.Domain.Core.csproj", "{A8948D95-59FA-4AE9-B779-001436C8E13A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{059FDFB5-DDE4-4C5F-910D-F7485BA4299A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{059FDFB5-DDE4-4C5F-910D-F7485BA4299A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{059FDFB5-DDE4-4C5F-910D-F7485BA4299A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B583383D-EBC6-4CE1-928F-4CA2DCD308F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B583383D-EBC6-4CE1-928F-4CA2DCD308F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B583383D-EBC6-4CE1-928F-4CA2DCD308F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B583383D-EBC6-4CE1-928F-4CA2DCD308F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8948D95-59FA-4AE9-B779-001436C8E13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8948D95-59FA-4AE9-B779-001436C8E13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8948D95-59FA-4AE9-B779-001436C8E13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8948D95-59FA-4AE9-B779-001436C8E13A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +71,8 @@ Global
 		{713BFC2C-9E0D-4F91-BD24-8CDA2DD40707} = {880BB2CA-3A15-4EC7-8983-B3C7D8CD679E}
 		{163D14B6-059F-42DA-A934-C683E46DC9E3} = {880BB2CA-3A15-4EC7-8983-B3C7D8CD679E}
 		{059FDFB5-DDE4-4C5F-910D-F7485BA4299A} = {880BB2CA-3A15-4EC7-8983-B3C7D8CD679E}
+		{B583383D-EBC6-4CE1-928F-4CA2DCD308F7} = {62765A7B-DC99-4FDC-A5B0-A8970985A09E}
+		{A8948D95-59FA-4AE9-B779-001436C8E13A} = {62765A7B-DC99-4FDC-A5B0-A8970985A09E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A31EFF21-FFBB-41BD-A687-5B2C3722B281}

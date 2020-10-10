@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Udemy.Ecommerce.Domain.Interface\Udemy.Ecommerce.Domain.Interface.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Infraestructure.Interface\Udemy.Ecommerce.Infraestructure.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
