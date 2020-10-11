@@ -23,19 +23,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Infraestruc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Infraestructure.Repository", "Udemy.Ecommerce.Infraestructure.Repository\Udemy.Ecommerce.Infraestructure.Repository.csproj", "{059FDFB5-DDE4-4C5F-910D-F7485BA4299A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Domain.Interface", "Udemy.Ecommerce.Domain.Interface\Udemy.Ecommerce.Domain.Interface.csproj", "{B583383D-EBC6-4CE1-928F-4CA2DCD308F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Domain.Interface", "Udemy.Ecommerce.Domain.Interface\Udemy.Ecommerce.Domain.Interface.csproj", "{B583383D-EBC6-4CE1-928F-4CA2DCD308F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Domain.Core", "Udemy.Ecommerce.Domain.Core\Udemy.Ecommerce.Domain.Core.csproj", "{A8948D95-59FA-4AE9-B779-001436C8E13A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Domain.Core", "Udemy.Ecommerce.Domain.Core\Udemy.Ecommerce.Domain.Core.csproj", "{A8948D95-59FA-4AE9-B779-001436C8E13A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Transversal.Mapper", "Udemy.Ecommerce.Transversal.Mapper\Udemy.Ecommerce.Transversal.Mapper.csproj", "{099C2435-72E7-4BCA-8963-D19DA6413032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Transversal.Mapper", "Udemy.Ecommerce.Transversal.Mapper\Udemy.Ecommerce.Transversal.Mapper.csproj", "{099C2435-72E7-4BCA-8963-D19DA6413032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Transversal.Logging", "Udemy.Ecommerce.Transversal.Logging\Udemy.Ecommerce.Transversal.Logging.csproj", "{E37C872D-FE5C-4E55-98A4-A950B9108217}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Transversal.Logging", "Udemy.Ecommerce.Transversal.Logging\Udemy.Ecommerce.Transversal.Logging.csproj", "{E37C872D-FE5C-4E55-98A4-A950B9108217}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Application.DTO", "Udemy.Ecommerce.Application.DTO\Udemy.Ecommerce.Application.DTO.csproj", "{B014B0B5-4427-4D01-888C-8AFC20C388B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Application.DTO", "Udemy.Ecommerce.Application.DTO\Udemy.Ecommerce.Application.DTO.csproj", "{B014B0B5-4427-4D01-888C-8AFC20C388B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Application.Interface", "Udemy.Ecommerce.Application.Interface\Udemy.Ecommerce.Application.Interface.csproj", "{44B3AC18-73BE-4446-A257-F5BBE5EA5777}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Application.Interface", "Udemy.Ecommerce.Application.Interface\Udemy.Ecommerce.Application.Interface.csproj", "{44B3AC18-73BE-4446-A257-F5BBE5EA5777}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Application.Main", "Udemy.Ecommerce.Application.Main\Udemy.Ecommerce.Application.Main.csproj", "{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Application.Main", "Udemy.Ecommerce.Application.Main\Udemy.Ecommerce.Application.Main.csproj", "{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Service.WebAPI", "Udemy.Ecommerce.Service.WebAPI\Udemy.Ecommerce.Service.WebAPI.csproj", "{57B43438-3BF7-4E9E-8735-E494E4ADDC1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,10 @@ Global
 		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B43438-3BF7-4E9E-8735-E494E4ADDC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B43438-3BF7-4E9E-8735-E494E4ADDC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B43438-3BF7-4E9E-8735-E494E4ADDC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B43438-3BF7-4E9E-8735-E494E4ADDC1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +114,7 @@ Global
 		{B014B0B5-4427-4D01-888C-8AFC20C388B1} = {606F3061-1B90-4A51-91DF-2118FE2A88E8}
 		{44B3AC18-73BE-4446-A257-F5BBE5EA5777} = {606F3061-1B90-4A51-91DF-2118FE2A88E8}
 		{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D} = {606F3061-1B90-4A51-91DF-2118FE2A88E8}
+		{57B43438-3BF7-4E9E-8735-E494E4ADDC1F} = {3E9A94EB-9BA2-4536-9F1D-1319A52C55A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A31EFF21-FFBB-41BD-A687-5B2C3722B281}

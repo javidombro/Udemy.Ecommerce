@@ -9,7 +9,7 @@ namespace Udemy.Ecommerce.Infraestructure.Data
     {
 
         private readonly IConfiguration _configuration;
-        private readonly string connectionString = "";
+        private readonly string connectionString = "NorthWindConnection";
 
         public ConnectionFactory(IConfiguration configuration)
         {

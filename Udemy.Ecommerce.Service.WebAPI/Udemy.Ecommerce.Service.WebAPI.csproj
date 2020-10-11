@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.1.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Udemy.Ecommerce.Application.Interface\Udemy.Ecommerce.Application.Interface.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Application.Main\Udemy.Ecommerce.Application.Main.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Domain.Core\Udemy.Ecommerce.Domain.Core.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Infraestructure.Data\Udemy.Ecommerce.Infraestructure.Data.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Infraestructure.Repository\Udemy.Ecommerce.Infraestructure.Repository.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Transversal.Common\Udemy.Ecommerce.Transversal.Common.csproj" />
+    <ProjectReference Include="..\Udemy.Ecommerce.Transversal.Mapper\Udemy.Ecommerce.Transversal.Mapper.csproj" />
+  </ItemGroup>
+
+</Project>

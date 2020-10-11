@@ -50,7 +50,7 @@ namespace Udemy.Ecommerce.Infraestructure.Repository
 
             using (var connection = _connectionFactory.GetConnection)
             {
-                var query = "CustomersGetAll";
+                var query = "CustomersList";
                 var customers = connection.Query<Customer>(query, commandType: CommandType.StoredProcedure);
                 return customers;
             }
