@@ -13,6 +13,11 @@ using Udemy.Ecommerce.Infraestructure.Interface;
 using Udemy.Ecommerce.Infraestructure.Repository;
 using Udemy.Ecommerce.Transversal.Common;
 using Udemy.Ecommerce.Transversal.Mapper;
+using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
+using System.IO;
+using System;
 
 namespace Udemy.Ecommerce.Service.WebAPI
 {
@@ -34,13 +39,36 @@ namespace Udemy.Ecommerce.Service.WebAPI
 
             #region Dependency Injection
 
-            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton(Configuration);
             services.AddSingleton<IConnectionFactory, ConnectionFactory>();
             services.AddScoped<ICustomerApplication, CustomerApplication>();
             services.AddScoped<ICustomerDomain, CustomerDomain>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             #endregion
+
+            services.AddSwaggerGen(c =>
+           {
+               c.SwaggerDoc("v1", new OpenApiInfo()
+               {
+                   Version = "v1",
+                   Title = "Ecommerce Application",
+                   Contact = new OpenApiContact()
+                   {
+                       Email = "javi.dombro@gmail.com",
+                       Name = "Javier Alejandro Dombronsky"
+                   },
+                   Description = "Curso de Udemy sobre Arquitectura de aplicaciones empresariales",
+                   License = new OpenApiLicense()
+                   {
+                       Name = "GNU"
+                   }
+               });
+
+               var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+               var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+               c.IncludeXmlComments(xmlPath);
+           });
 
         }
 
@@ -51,6 +79,12 @@ namespace Udemy.Ecommerce.Service.WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Ecommerce v1");
+            });
 
             app.UseMvc();
         }
