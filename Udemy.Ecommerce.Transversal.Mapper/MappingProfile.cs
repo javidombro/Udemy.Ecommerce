@@ -9,6 +9,7 @@ namespace Udemy.Ecommerce.Transversal.Mapper
         public MappingProfile()
         {
             CreateMap<Customer, CustomerDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
 
             //CreateMap<Customer, CustomerDTO>().ReverseMap()
             //    .ForMember(destination => destination.CustomerId, source => source.MapFrom(src => src.CustomerId))

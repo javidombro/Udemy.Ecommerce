@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
+using System;
+using System.IO;
+using System.Reflection;
 using Udemy.Ecommerce.Application.Interface;
 using Udemy.Ecommerce.Application.Main;
 using Udemy.Ecommerce.Domain.Core;
@@ -11,18 +15,16 @@ using Udemy.Ecommerce.Domain.Interface;
 using Udemy.Ecommerce.Infraestructure.Data;
 using Udemy.Ecommerce.Infraestructure.Interface;
 using Udemy.Ecommerce.Infraestructure.Repository;
+using Udemy.Ecommerce.Service.WebAPI.Helpers;
 using Udemy.Ecommerce.Transversal.Common;
 using Udemy.Ecommerce.Transversal.Mapper;
-using Swashbuckle.AspNetCore.Swagger;
-using Microsoft.OpenApi.Models;
-using System.Reflection;
-using System.IO;
-using System;
 
 namespace Udemy.Ecommerce.Service.WebAPI
 {
     public class Startup
     {
+        public readonly string myPolicy = "EcommerceApiPolicy";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -37,6 +39,9 @@ namespace Udemy.Ecommerce.Service.WebAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(options => { options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver(); });
 
+            var appSettingsSection = Configuration.GetSection("Config");
+            services.Configure<AppSettings>(appSettingsSection);
+
             #region Dependency Injection
 
             services.AddSingleton(Configuration);
@@ -44,8 +49,13 @@ namespace Udemy.Ecommerce.Service.WebAPI
             services.AddScoped<ICustomerApplication, CustomerApplication>();
             services.AddScoped<ICustomerDomain, CustomerDomain>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IUserApplication, UserApplication>();
+            services.AddScoped<IUserDomain, UserDomain>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
-            #endregion
+            #endregion Dependency Injection
+
+            #region Swagger
 
             services.AddSwaggerGen(c =>
            {
@@ -70,6 +80,22 @@ namespace Udemy.Ecommerce.Service.WebAPI
                c.IncludeXmlComments(xmlPath);
            });
 
+            #endregion Swagger
+
+            #region CORS
+
+            services.AddCors(options =>
+           {
+               options.AddPolicy(myPolicy,
+                   builder =>
+                   {
+                       builder.WithOrigins(Configuration["Config:OriginCors"])
+                       .AllowAnyHeader()
+                       .AllowAnyMethod();
+                   });
+           });
+
+            #endregion CORS
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -85,6 +111,10 @@ namespace Udemy.Ecommerce.Service.WebAPI
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Ecommerce v1");
             });
+
+            app.UseCors(myPolicy);
+
+            app.UseAuthentication();
 
             app.UseMvc();
         }
