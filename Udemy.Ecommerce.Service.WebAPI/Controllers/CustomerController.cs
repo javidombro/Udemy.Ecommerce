@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Udemy.Ecommerce.Application.DTO;
 using Udemy.Ecommerce.Application.Interface;
 
 namespace Udemy.Ecommerce.Service.WebAPI.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CustomerController : Controller
     {
 
@@ -19,8 +21,8 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
 
         #region Metodos Sincronicos
 
-        [HttpPost]
-        public IActionResult Insert([FromBody]CustomerDTO customerDTO)
+        [HttpPost("Insert")]
+        public IActionResult Insert([FromBody] CustomerDTO customerDTO)
         {
             if (customerDTO == null)
             {
@@ -34,8 +36,8 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpPut]
-        public IActionResult Update([FromBody]CustomerDTO customerDTO)
+        [HttpPut("Update")]
+        public IActionResult Update([FromBody] CustomerDTO customerDTO)
         {
             if (customerDTO == null)
             {
@@ -49,7 +51,7 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("{customerId}")]
+        [HttpDelete("Delete/{customerId}")]
         public IActionResult Delete(string customerId)
         {
             if (string.IsNullOrEmpty(customerId))
@@ -64,7 +66,7 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("{customerId}")]
+        [HttpGet("Get/{customerId}")]
         public IActionResult Get(string customerId)
         {
             if (customerId == null)
@@ -79,7 +81,7 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
             var response = _customerApplication.GetAll();
@@ -94,8 +96,8 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
 
         #region Metodos Async
 
-        [HttpPost]
-        public async Task<IActionResult> InsertAsync([FromBody]CustomerDTO customerDTO)
+        [HttpPost("InsertAsync")]
+        public async Task<IActionResult> InsertAsync([FromBody] CustomerDTO customerDTO)
         {
             if (customerDTO == null)
             {
@@ -109,8 +111,8 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateAsync([FromBody]CustomerDTO customerDTO)
+        [HttpPut("UpdateAsync")]
+        public async Task<IActionResult> UpdateAsync([FromBody] CustomerDTO customerDTO)
         {
             if (customerDTO == null)
             {
@@ -124,7 +126,7 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("{customerId}")]
+        [HttpDelete("DeleteAsync/{customerId}")]
         public async Task<IActionResult> DeleteAsync(string customerId)
         {
             if (string.IsNullOrEmpty(customerId))
@@ -139,7 +141,7 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("{customerId}")]
+        [HttpGet("GetAsync/{customerId}")]
         public async Task<IActionResult> GetAsync(string customerId)
         {
             if (customerId == null)
@@ -154,7 +156,7 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet]
+        [HttpGet("GetAllAsync")]
         public async Task<IActionResult> GetAllAsync()
         {
             var response = await _customerApplication.GetAllAsync();

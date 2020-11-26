@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1259
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Transversal.Common", "Udemy.Ecommerce.Transversal.Common\Udemy.Ecommerce.Transversal.Common.csproj", "{6E6EFEE0-0FD0-4378-AAE0-A566D163FE3B}"
 EndProject
@@ -37,7 +37,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Application
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Application.Main", "Udemy.Ecommerce.Application.Main\Udemy.Ecommerce.Application.Main.csproj", "{E7AAC67E-FF63-45BA-B2D1-16BCE6948C4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Ecommerce.Service.WebAPI", "Udemy.Ecommerce.Service.WebAPI\Udemy.Ecommerce.Service.WebAPI.csproj", "{57B43438-3BF7-4E9E-8735-E494E4ADDC1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.Ecommerce.Service.WebAPI", "Udemy.Ecommerce.Service.WebAPI\Udemy.Ecommerce.Service.WebAPI.csproj", "{57B43438-3BF7-4E9E-8735-E494E4ADDC1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71A89A6F-1BC7-47CF-B00B-9BB82099A573}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

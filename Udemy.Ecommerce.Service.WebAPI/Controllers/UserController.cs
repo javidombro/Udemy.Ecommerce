@@ -14,7 +14,7 @@ using Udemy.Ecommerce.Transversal.Common;
 namespace Udemy.Ecommerce.Service.WebAPI.Controllers
 {
     [Authorize]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : Controller
     {
@@ -28,7 +28,7 @@ namespace Udemy.Ecommerce.Service.WebAPI.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]
+        [HttpPost("Authenticate")]
         public IActionResult Authenticate([FromBody] UserDTO userDTO)
         {
             var response = _userApplication.Authenticate(userDTO.UserName, userDTO.Password);
