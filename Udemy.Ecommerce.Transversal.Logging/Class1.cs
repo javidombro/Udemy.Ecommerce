@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Udemy.Ecommerce.Transversal.Logging
+﻿namespace Udemy.Ecommerce.Transversal.Logging
 {
     public class Class1
     {

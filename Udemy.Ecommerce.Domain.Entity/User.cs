@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Udemy.Ecommerce.Domain.Entity
+﻿namespace Udemy.Ecommerce.Domain.Entity
 {
     public class User
     {
